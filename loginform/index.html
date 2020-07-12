@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700&family=Sail&family=Spartan:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a061601420.js" crossorigin="anonymous"></script>
+    <script>
+        
+    /*function emptyValidation() {
+    //  var formField = document.forms["Form1"]["FullName"].value;
+      const formField = document.querySelectorAll('input').value;
+      console.log(input);
+      if (formField == "") {
+         alert("Name must be filled out");
+         return false;
+      }
+      else{
+        alert("thanks for the details");
+         return false;
+      }
+   }*/
+   function emptyValidation() {
+       if( document.Form1.FullName.value == "" )
+       {
+        alert( "Please provide your FullName!" );
+        document.Form1.FullName.focus() ;
+        return false;
+      }
+     if( document.Form1.Address1.value == "" )
+     {
+       alert( "Please provide your Address1!" );
+       document.Form1.Address1.focus() ;
+       return false;
+     }
+     if( document.Form1.Address2.value == "" )
+       {
+        alert( "Please provide your Address2!" );
+        document.Form1.Address2.focus() ;
+        return false;
+      }
+     if( document.Form1.City.value == "" )
+     {
+       alert( "Please provide your City!" );
+       document.Form1.City.focus() ;
+       return false;
+     }
+     if( document.Form1.State.value == "" )
+       {
+        alert( "Please provide your State!" );
+        document.Form1.State.focus() ;
+        return false;
+      }
+     if( document.Form1.Postal.value == "" )
+     {
+       alert( "Please provide your Postal!" );
+       document.Form1.Postal.focus() ;
+       return false;
+     }
+     if( document.Form1.country.value == "" )
+       {
+        alert( "Please provide your country!" );
+        document.Form1.country.focus() ;
+        return false;
+      }
+     if( document.Form1.email.value == "" )
+     {
+       alert( "Please provide your Email!" );
+       document.Form1.email.focus() ;
+       return false;
+     }
+     if( document.Form1.phonenumber.value == "" )
+     {
+       alert( "Please provide your phonenumber!" );
+       document.Form1.phonenumber.focus() ;
+       return false;
+     }
+
+     alert("thank for info");
+   }
+        </script>
+</head>
+<body>
+    <div class="maincontainer">
+        <form name="Form1" onsubmit="return emptyValidation()" required >
+            
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >Full Name</label>
+                </div>
+                 <i class="fa fa-user icon"></i>
+                 <input class="input-field" id="input" type="text" placeholder="Full Name" name="FullName">
+            </div>
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >Address Line 1</label>
+                </div>
+                  <i class="fas fa-home icon"></i>
+                  <input class="input-field" id="input" id="input" type="text" placeholder="Address Line 1" name="Address1">
+            </div>
+
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >Address Line 2</label>
+                </div>
+                 <i class="fas fa-home icon"></i>
+                 <input class="input-field" id="input" type="text" placeholder="Address Line 2" name="Address2">
+            </div>
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >City</label>
+                </div>
+                 <i class="fas fa-home icon"></i>
+                 <input class="input-field" id="input" type="text" placeholder="City" name="City">
+            </div>
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field1" >State/Province/Region</label>
+                </div>
+                 <i class="fas fa-home icon"></i>
+                 <input class="input-field" id="input" type="text" placeholder="State/Province/Region" name="State">
+            </div>
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >Postal Code/ZIP</label>
+                </div>
+                 <i class="fas fa-home icon"></i>
+                 <input class="input-field" id="input" type="text" placeholder="Postal Code/ZIP" name="Postal">
+            </div>
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >Country</label>
+                </div>
+                <i class="fas fa-list-ul icon"></i>
+                <select name="country">
+                    <option value="">A really long option push menu to select  </option>
+                    <option value="dog">India</option>
+                    <option value="cat">USA</option>
+                    <option value="hamster">PAK</option>
+                    <option value="parrot">AFGAN</option>
+                    <option value="spider">CHINA</option>
+                    <option value="goldfish">UK</option>
+                </select>
+            </div>
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >Email</label>
+                </div>
+                <i class="far fa-envelope icon"></i>
+                 <input class="input-field" id="input" type="text" placeholder="Email" name="email">
+            </div>
+
+            <div class="input-container">
+                <div class="label_input-field">
+                   <label class="label_input-field" >Number</label>
+                </div>
+                <i class="fas fa-phone-alt icon"></i>
+                 <input class="input-field" id="input" type="text" placeholder="Phone Number" name="phonenumber">
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+          </form>
+
+    </div>
+    
+</body>
+</html>
+
+
